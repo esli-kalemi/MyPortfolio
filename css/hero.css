@@ -1,0 +1,172 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 100px 40px 60px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    max-width: 750px;
+}
+
+
+/* =========================
+   GREETING
+========================= */
+
+.hero-greeting {
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.hero h1 {
+    font-size: clamp(60px, 10vw, 100px);
+    line-height: 1;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.hero h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.primary-btn {
+    background-color: var(--deep-teal);
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background-color: var(--dark-teal);
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.secondary-btn {
+    border: 1px solid var(--deep-teal);
+    color: var(--deep-teal);
+}
+
+.secondary-btn:hover {
+    background-color: var(--soft-cyan);
+    border-color: var(--soft-cyan);
+    color: var(--deep-teal);
+}
+
+/* =========================
+   HERO ANIMATION
+========================= */
+
+.hero-content {
+    animation: heroFadeIn 1s ease forwards;
+}
+
+
+@keyframes heroFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero h1 {
+    color: var(--deep-teal);
+}
+
+.hero h1 {
+    color: var(--deep-teal);
+}

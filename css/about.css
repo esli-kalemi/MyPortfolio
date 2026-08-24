@@ -1,0 +1,112 @@
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================
+   ABOUT CONTENT
+========================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 350px 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   ABOUT IMAGE
+========================= */
+
+.about-image {
+    width: 100%;
+    max-width: 350px;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   ABOUT TEXT
+========================= */
+
+.about-text {
+    max-width: 650px;
+}
+
+.about-text h3 {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   ABOUT INFO
+========================= */
+
+.about-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+.about-info-item {
+    background-color: var(--light-cyan);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.about-info-item strong {
+    font-size: 14px;
+}
+
+.about-info-item span {
+    font-size: 13px;
+
+    line-height: 1.5;
+}

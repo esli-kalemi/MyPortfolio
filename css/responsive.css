@@ -1,0 +1,342 @@
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    .section {
+        padding: 80px 30px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-container {
+        padding: 0 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        padding: 100px 30px 60px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-content {
+        grid-template-columns: 280px 1fr;
+
+        gap: 50px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-content {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    .section {
+        padding: 70px 20px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-container {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .nav-links {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        padding: 10px 0 20px;
+
+        background-color: var(--white);
+
+        border-bottom: 1px solid var(--white);
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .nav-links li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .nav-links a {
+        display: block;
+
+        padding: 12px 20px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 100vh;
+
+        padding: 100px 20px 60px;
+    }
+
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .about-image {
+        max-width: 280px;
+
+        margin: 0 auto;
+    }
+
+
+    .about-text h3 {
+        font-size: 24px;
+    }
+
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .skill-category {
+        padding: 25px;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .project-image {
+        height: 200px;
+    }
+
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .timeline {
+        margin-left: 0;
+    }
+
+
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .contact-text h3 {
+        font-size: 24px;
+    }
+
+    .navbar-container {
+        position: relative;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .menu-toggle {
+        order: 3;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer-container {
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}

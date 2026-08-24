@@ -1,0 +1,201 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   COLOR PALETTE
+========================= */
+
+:root {
+    --deep-teal: #0B3D3A;
+    --dark-teal: #123F3D;
+
+    --soft-cyan: #63D6D0;
+    --light-cyan: #DDF5F3;
+
+    --off-white: #F7F9F8;
+    --white: #FFFFFF;
+
+    --border: #D8E5E3;
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    --off-white: #102B29;
+    --white: #173A37;
+
+    --deep-teal: #63D6D0;
+    --dark-teal: #E5F5F3;
+
+    --light-cyan: #1B4744;
+    --border: #2D5B57;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--off-white);
+    color: var(--dark-teal);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    width: 100%;
+     scroll-margin-top: 75px;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+.hidden {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================
+   STAGGERED ANIMATIONS
+========================= */
+
+.skill-category:nth-child(2),
+.project-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+
+.skill-category:nth-child(3),
+.project-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+
+.skill-category:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+
+.skill-category:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+
+.skill-category:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+body {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.skill-category,
+.project-card,
+.timeline-content,
+.about-info-item,
+.form-group input,
+.form-group textarea {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}

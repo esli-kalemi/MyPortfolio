@@ -1,0 +1,47 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 40px;
+
+    border-top: 1px solid var(--white);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.footer-container p {
+    font-size: 13px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.footer-links a:hover {
+    opacity: 0.6;
+}

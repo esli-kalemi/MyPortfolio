@@ -1,0 +1,93 @@
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-section {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================
+   SKILLS CONTAINER
+========================= */
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   SKILL CATEGORY
+========================= */
+
+.skill-category {
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.skill-category:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(11, 61, 58, 0.12);
+
+    border-color: var(--soft-cyan);
+}
+
+
+/* =========================
+   CATEGORY TITLE
+========================= */
+
+.skill-category h3 {
+    font-size: 21px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SKILLS LIST
+========================= */
+
+.skills-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   SKILL TAG
+========================= */
+
+.skills-list span {
+    padding: 7px 13px;
+
+    background-color: var(--light-cyan);
+
+    color: var(--deep-teal);
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}

@@ -1,0 +1,135 @@
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-section {
+    min-height: 80vh;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+
+/* Vertical line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background-color: var(--soft-cyan);
+}
+
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 50px;
+
+    margin-bottom: 50px;
+}
+
+
+/* Timeline dot */
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    top: 5px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background-color: var(--deep-teal);
+}
+
+
+/* =========================
+   TIMELINE CONTENT
+========================= */
+
+.timeline-content {
+    padding: 25px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.timeline-content:hover {
+    transform: translateX(5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.timeline-date {
+    display: inline-block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.timeline-content h3 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.timeline-content h4 {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+
+.timeline-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+}

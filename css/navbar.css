@@ -1,0 +1,107 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background-color: rgba(247, 249, 248, 0.95);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(16, 43, 41, 0.95);
+}
+
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    height: 75px;
+
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--deep-teal);
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--dark-teal);
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--soft-cyan);
+}
+
+
+/* =========================
+   MENU BUTTON
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
