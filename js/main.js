@@ -1,3 +1,6 @@
+console.log("main.js is loaded!");
+
+
 const components = {
     navbar: "components/navbar.html",
     home: "components/hero.html",
@@ -117,7 +120,7 @@ loadComponents().then(() => {
 // CONTACT FORM
 // =========================
 
-document.addEventListener("submit", function (event) {
+document.addEventListener("submit", async function (event) {
 
     const form = event.target.closest("#contactForm");
 
@@ -133,52 +136,100 @@ document.addEventListener("submit", function (event) {
     const message = form.querySelector("#message").value.trim();
 
     const formMessage = form.querySelector("#formMessage");
+    const emailError = form.querySelector("#emailError");
 
+
+    // Validate required fields
 
     if (!name || !email || !message) {
 
-            formMessage.textContent =
-                "Please fill in all fields.";
+        formMessage.textContent =
+            "Please fill in all fields.";
 
-            formMessage.className =
-                "form-message error";
+        formMessage.className =
+            "form-message error";
 
-            return;
+        return;
+    }
+
+
+    // Validate email
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+
+        emailError.textContent =
+            "Please enter a valid email address.";
+
+        emailError.className =
+            "field-error error";
+
+        return;
+    }
+
+
+    emailError.textContent = "";
+    emailError.className = "field-error";
+
+
+    // Show sending message
+
+    formMessage.textContent = "Sending...";
+    formMessage.className = "form-message";
+
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:3000/api/contact",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                })
+            }
+        );
+
+
+        const data = await response.json();
+
+
+        if (!response.ok) {
+            throw new Error(
+                data.error || "Failed to send message."
+            );
         }
 
 
-        // Validate email
+        // Success
 
-        const emailError =
-    form.querySelector("#emailError");
+        formMessage.textContent =
+            "Your message has been sent successfully!";
 
-const emailPattern =
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        formMessage.className =
+            "form-message success";
 
-
-if (!emailPattern.test(email)) {
-
-    emailError.textContent =
-        "Please enter a valid email address.";
-
-    emailError.className =
-        "field-error error";
-
-    return;
-}
+        form.reset();
 
 
-emailError.textContent = "";
-emailError.className = "field-error";
+    } catch (error) {
 
+        console.error(error);
 
-    formMessage.textContent =
-        `Thank you, ${name}! Your message has been received.`;
+        formMessage.textContent =
+            "Something went wrong. Please try again.";
 
-    formMessage.className =
-        "form-message success";
-
-
-    form.reset();
+        formMessage.className =
+            "form-message error";
+    }
 
 });
