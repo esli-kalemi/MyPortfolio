@@ -183,8 +183,7 @@ document.addEventListener("submit", async function (event) {
     try {
 
         const response = await fetch(
-            "http://localhost:3000/api/contact",
-            {
+        "https://myportfolio-backend-6ls4.onrender.com/api/contact" ,           {
                 method: "POST",
 
                 headers: {
